@@ -1,7 +1,7 @@
 package com.geeks.hws_fifth.domain.models
 
-enum class TypeOfOperation {
-    INCREASE,
-    DECREASE,
-    RESET
+enum class TypeOfOperation(val value: String) {
+    INCREASE("INCREASE"),
+    DECREASE("DECREASE"),
+    RESET("0")
 }

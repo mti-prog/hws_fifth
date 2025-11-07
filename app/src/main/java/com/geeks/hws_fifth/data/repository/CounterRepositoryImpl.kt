@@ -1,6 +1,7 @@
 package com.geeks.hws_fifth.data.repository
 
 import com.geeks.hws_fifth.data.api.CountApi
+import com.geeks.hws_fifth.data.mapper.fromDto
 import com.geeks.hws_fifth.domain.models.Count
 import com.geeks.hws_fifth.domain.repository.CounterRepository
 
@@ -17,8 +18,7 @@ class CounterRepositoryImpl(
     }
 
     override fun getCount(): Count {
-        val dto = api.getCount()
-        return CountMapper.fromDto(dto)
+        return api.getCount().fromDto()
     }
 
     override fun reset() {
