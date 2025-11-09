@@ -1,9 +1,8 @@
 package com.geeks.hws_fifth
 
 import android.app.Application
-import com.geeks.hws_fifth.di.PresentationCountModule
-import com.geeks.hws_fifth.di.dataCountModule
-import com.geeks.hws_fifth.di.domainCountModule
+import com.geeks.hws_fifth.di.appCountModule
+import com.geeks.hws_fifth.di.cartoonModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -16,11 +15,7 @@ class App: Application() {
         startKoin {
             androidLogger(level = Level.DEBUG)
             androidContext(this@App)
-            modules(
-                dataCountModule,
-                domainCountModule,
-                PresentationCountModule
-            )
+            modules(appCountModule, cartoonModule)
         }
     }
 }

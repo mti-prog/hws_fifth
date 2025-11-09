@@ -49,7 +49,7 @@ class CountActivity : AppCompatActivity() {
     }
     fun formatMillisToDateTime(milliseconds: Long): String {
         val date = Date(milliseconds)
-        val dateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss.SSS", Locale.getDefault())
+        val dateFormat = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
         return dateFormat.format(date)
     }
 }
