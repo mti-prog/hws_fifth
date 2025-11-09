@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.geeks.hws_fifth.R
 import com.geeks.hws_fifth.databinding.ActivityCountBinding
 import com.geeks.hws_fifth.presentation.CountViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.sql.Date
 import java.text.SimpleDateFormat
 import java.util.Locale
@@ -18,7 +19,7 @@ import java.util.Locale
 
 class CountActivity : AppCompatActivity() {
     private val binding by lazy { ActivityCountBinding.inflate(layoutInflater) }
-    private val viewModel: CountViewModel by viewModels()
+    private val viewModel: CountViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
